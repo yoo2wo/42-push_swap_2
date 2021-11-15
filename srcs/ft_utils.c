@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:01:36 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 16:54:50 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/15 22:07:29 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,47 @@ void		ft_error(int ret) //return 안해줘도 되지않나
 
 long long	ft_atoll(char *str)
 {
+	long long	result;
+	int			sign;
 
+	result = 0;
+	sign = 1;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	if (ft_isalpha(*str))
+		ft_error(0);
+	return (sign * result);
+}
+
+int		ft_check_arr(long long *arr, int arr_size)//동일한게  있는지 체크
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < arr_size - 1)
+	{
+		j = i + 1;
+		while (j < arr_size)
+		{
+			if (arr[i] == arr[j])
+				ft_error(0);
+			j++;
+		}
+		if (arr[i] > 2147483647 || arr[i] < -2147483648)
+			ft_error(0);
+		i++;
+	}
+	return (1);
 }

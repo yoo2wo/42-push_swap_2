@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:52:59 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 16:56:10 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/15 23:30:37 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct	s_stack
 	struct s_stack	*next;
 }				t_stack;
 
+//main.c
+void	ft_check_sort(long long *int_arr, int arr_size);
+
+//ft_lst.c
+void	ft_make_lst(t_stack *head, long long *arr, int cnt);
+void	ft_free_lst(t_stack *a, t_stack *b);
+
 //ft_init.c
 t_stack		*ft_stack_init(void);
 void		ft_arr_put(char **split_arr, long long *int_arr, int *j, int arr_size);
@@ -30,6 +37,7 @@ void		ft_arr_put(char **split_arr, long long *int_arr, int *j, int arr_size);
 //ft_utils.c
 void	ft_error(int ret);
 long long	ft_atoll(char *str);
+int		ft_check_arr(long long *arr, int arr_size);
 
 //ft_utils_arr.c
 void	free_str(char **str);
@@ -42,5 +50,8 @@ static void		free_all(char **mem, size_t cnt);
 static void		ft_slcpy(char *dest, char const *src, int start, int last);
 static void		ft_split_sub(char const *s, char c, char **str);
 char			**ft_split(char const *s, char c);
+
+//sort/ft_sort_more.c
+void	ft_a_b(t_stack *a, t_stack *b, int cnt);
 
 #endif
