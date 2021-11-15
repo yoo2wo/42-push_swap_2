@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 15:10:37 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 16:33:56 by jayoo            ###   ########.fr       */
+/*   Created: 2021/11/15 16:01:36 by jayoo             #+#    #+#             */
+/*   Updated: 2021/11/15 16:54:50 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
-#include <stdio.h>
 
-int	main (int argc, char *argv[])
+void		ft_error(int ret) //return 안해줘도 되지않나
 {
-	t_stack		*a;
-	t_stack		*b;
-	int			arr_size;
-	long long	*int_arr;
+	write(1, "Error\n", 6);
+	exit(ret);
+}
 
-	if (argc < 2)
-		return (0);
-	a = ft_stack_init();
-	b = ft_stack_init();
-	arr_size = ft_input_num(argc, argv);
-	//printf("%d\n",arr_size); 개수 확인용
-	int_arr = (long long *)malloc(sizeof(long long) * arr_size);
-	if (!int_arr)
-		ft_error(0);
-	ft_init_arr(argv, int_arr, argc, arr_size);
-
+long long	ft_atoll(char *str)
+{
 
 }
