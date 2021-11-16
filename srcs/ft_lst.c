@@ -6,11 +6,22 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 22:49:13 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 23:15:27 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/16 12:04:13 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
+
+t_stack *ft_find_last(t_stack *node)
+{
+	if (!node)
+		return (0);
+	while (node->next)
+	{
+		node = node->next;
+	}
+	return (node);
+}
 
 void	ft_free_lst(t_stack *a, t_stack *b)
 {
