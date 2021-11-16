@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push.c                                          :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 11:23:29 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 15:51:49 by jayoo            ###   ########.fr       */
+/*   Created: 2021/11/16 16:02:59 by jayoo             #+#    #+#             */
+/*   Updated: 2021/11/16 16:06:19 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_push_swap.h"
 
-void	pa(t_stack *a, t_stack *b, int *pa_cnt)
+void	sa(t_stack *a)
 {
-	int	size;
 	int data;
+	int size;
 
-	size = ft_size(b);//
-	if (size < 1)
+	size = ft_size(a);
+	if (size < 2)
 		return ;
-	data = b->next->data;
-	ft_pop(b);
-	ft_push_first(a, data);
-	*pa_cnt += 1;
-	write(1, "pa\n", 3);
+	data = a->next->next->data;
+	a->next->next->data = a->next->data;
+	a->next->data = data;
+	write(1, "sa\n", 3);
 }
 
-void	pb(t_stack *a, t_stack *b, int *pb_cnt)
+void	sb(t_stack *b)
 {
-	int	size;
 	int data;
+	int size;
 
-	size = ft_size(a);//
-	if (size < 1)
+	size = ft_size(b);
+	if (size < 2)
 		return ;
-	data = a->next->data;
-	ft_pop(a);
-	ft_push_first(b, data);
-	*pb_cnt += 1;
-	write(1, "pb\n", 3);
+	data = b->next->next->data;
+	b->next->next->data = b->next->data;
+	b->next->data = data;
+	write(1, "sb\n", 3);
+}
+
+void	ss(t_stack *a, t_stack *b)
+{
+	sa(a);
+	sb(b);
+	write(1, "ss\n", 3);
 }

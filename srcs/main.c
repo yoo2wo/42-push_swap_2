@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:10:37 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 23:29:03 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/16 16:59:36 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ void	ft_check_factor(t_stack *a, t_stack *b, int num)
 	if (num == 1)
 		return ;
 	else if (num == 2)
-		//
-		;
+		ft_factor_two(a);
 	else if (num > 2 && num < 6)
-		//
-		;
+		ft_factor_five(a, b);
 	else
 		ft_a_b(a, b, num);
 

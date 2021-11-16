@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:52:59 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 12:13:01 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/16 17:40:52 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@ t_stack *ft_find_last(t_stack *node);
 //ft_init.c
 t_stack		*ft_stack_init(void);
 void		ft_arr_put(char **split_arr, long long *int_arr, int *j, int arr_size);
+void		ft_init_arr(char **av, long long *int_arr, int ac, int arr_size);
 
 //ft_utils.c
+int			ft_isspace(char c);
+int			ft_isalpha(char c);
 void	ft_error(int ret);
 long long	ft_atoll(char *str);
 int		ft_check_arr(long long *arr, int arr_size);
@@ -62,16 +65,33 @@ void	ft_push_last(t_stack *head, int data);
 
 //sort/ft_sort_more.c
 void	ft_a_b(t_stack *a, t_stack *b, int cnt);
+void	ft_b_a(t_stack *a, t_stack *b, int cnt);
+void	ft_rr(t_stack *a, t_stack *b, int cnt, int type);
+void	ft_factor_two(t_stack *head);
 
 //sort/ft_sort_utils.c
 int		ft_find_pivot(t_stack *head, int cnt);
 void	ft_sort_arr(long long *arr, int cnt);
 void	ft_swap(long long *arr, int i, int min_idx);
 
+//sort/ft_sort_factor.c
+void	ft_factor_three(t_stack *head);
+void	ft_factor_five(t_stack *a, t_stack *b);
+
 //function/ft_rotate.c
 void	ra(t_stack *a, int *ra_cnt);
 void	rb(t_stack *b, int *rb_cnt);
 void	rr(t_stack *a, t_stack *b);
+
+//function/ft_rrotate.c
+void	rra(t_stack *a);
+void	rrb(t_stack *a);
+void	rrr(t_stack *a, t_stack *b);
+
+//function/ft_swap.c
+void	sa(t_stack *a);
+void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
 
 //function/ft_push.c
 void	pa(t_stack *a, t_stack *b, int *pa_cnt);

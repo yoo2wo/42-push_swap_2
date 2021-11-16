@@ -6,11 +6,22 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:01:36 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 22:07:29 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/16 15:52:20 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
+
+int			ft_isspace(char c)
+{
+	return (c == '\f' || c == '\n' || c == 'r' ||
+	c == '\t' || c == '\v' || c == ' ');
+}
+
+int			ft_isalpha(char c)
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
 
 void		ft_error(int ret) //return 안해줘도 되지않나
 {
