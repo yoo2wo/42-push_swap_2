@@ -6,11 +6,29 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:00:50 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 17:45:48 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/17 13:56:50 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_push_swap.h"
+
+void	ft_five_end(t_stack *a, t_stack *b, int pb_cnt, int max)
+{
+	int	i;
+
+	i = 0;
+	while (pb_cnt > 0)
+	{
+		if (b->next->data == max)
+		{
+			pa(a, b, &i);
+			ra(a, &i);
+		}
+		else
+			pa(a, b, &i);
+		pb_cnt--;
+	}
+}
 
 void	ft_factor_three(t_stack *head)
 {
@@ -37,5 +55,25 @@ void	ft_factor_three(t_stack *head)
 
 void	ft_factor_five(t_stack *a, t_stack *b)
 {
+	int		max;
+	int		min;
+	int		pb_cnt;
+	int		i;
 
+	i = 0;
+	pb_cnt = 0;
+	max = ft_find_max(a);
+	min = ft_find_min(a);
+	while (ft_size(a) > 3)
+	{
+		if (a->next->data == max || a->next->data == min)
+		{
+			pb(a, b, &i);
+			pb_cnt++;
+		}
+		else
+			ra(a, &i);
+	}
+	ft_factor_three(a);
+	ft_five_end(a, b, pb_cnt, max);
 }

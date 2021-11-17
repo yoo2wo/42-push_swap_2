@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:52:59 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 17:40:52 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/17 19:25:23 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ int		ft_split_arr_size(char **split_arr);
 int		ft_input_num(int ac, char **av);
 
 //ft_utils_split.c
-static size_t	ft_count(char const *str, char c);
-static void		free_all(char **mem, size_t cnt);
-static void		ft_slcpy(char *dest, char const *src, int start, int last);
-static void		ft_split_sub(char const *s, char c, char **str);
+size_t	ft_count(char const *str, char c);
+void		free_all(char **mem, size_t cnt);
+void		ft_slcpy(char *dest, char const *src, int start, int last);
+void		ft_split_sub(char const *s, char c, char **str);
 char			**ft_split(char const *s, char c);
 
 //ft_stack.c
@@ -73,10 +73,17 @@ void	ft_factor_two(t_stack *head);
 int		ft_find_pivot(t_stack *head, int cnt);
 void	ft_sort_arr(long long *arr, int cnt);
 void	ft_swap(long long *arr, int i, int min_idx);
+int		ft_find_max(t_stack *head);
+int		ft_find_min(t_stack *head);
 
 //sort/ft_sort_factor.c
 void	ft_factor_three(t_stack *head);
 void	ft_factor_five(t_stack *a, t_stack *b);
+void	ft_five_end(t_stack *a, t_stack *b, int pb_cnt, int max);
+
+//function/ft_push.c
+void	pa(t_stack *a, t_stack *b, int *pa_cnt);
+void	pb(t_stack *a, t_stack *b, int *pb_cnt);
 
 //function/ft_rotate.c
 void	ra(t_stack *a, int *ra_cnt);
@@ -93,7 +100,5 @@ void	sa(t_stack *a);
 void	sb(t_stack *b);
 void	ss(t_stack *a, t_stack *b);
 
-//function/ft_push.c
-void	pa(t_stack *a, t_stack *b, int *pa_cnt);
-void	pb(t_stack *a, t_stack *b, int *pb_cnt);
+
 #endif

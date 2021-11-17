@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:50:02 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 11:09:46 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/17 13:47:50 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,34 @@ int		ft_find_pivot(t_stack *head, int cnt)//소팅 한후에 pivot을 찾는다.
 	result = arr[cnt / 2];
 	free(arr);
 	return  (result);
+}
+
+int		ft_find_min(t_stack *head)
+{
+	int	min;
+
+	min = head->next->data;
+	head = head->next;
+	while (head)
+	{
+		if (min > head->data)
+			min = head->data;
+		head = head->next;
+	}
+	return (min);
+}
+
+int		ft_find_max(t_stack *head)
+{
+	int	max;
+
+	max = head->next->data;
+	head = head->next;
+	while (head)
+	{
+		if (max < head->data)
+			max = head->data;
+		head = head->next;
+	}
+	return (max);
 }

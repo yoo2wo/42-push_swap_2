@@ -6,13 +6,13 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:08:01 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 16:29:56 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/17 19:16:11 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
 
-static size_t	ft_count(char const *str, char c)
+size_t	ft_count(char const *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -33,7 +33,7 @@ static size_t	ft_count(char const *str, char c)
 	return (count);
 }
 
-static void		free_all(char **mem, size_t cnt)
+void		free_all(char **mem, size_t cnt)
 {
 	size_t	i;
 
@@ -46,7 +46,7 @@ static void		free_all(char **mem, size_t cnt)
 	free(mem);
 }
 
-static void		ft_slcpy(char *dest, char const *src, int start, int last)
+void		ft_slcpy(char *dest, char const *src, int start, int last)
 {
 	int i;
 
@@ -60,7 +60,7 @@ static void		ft_slcpy(char *dest, char const *src, int start, int last)
 	dest[i] = '\0';
 }
 
-static void		ft_split_sub(char const *s, char c, char **str)
+void		ft_split_sub(char const *s, char c, char **str)
 {
 	size_t	i;
 	size_t	j;

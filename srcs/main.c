@@ -6,12 +6,11 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:10:37 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 16:59:36 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/17 14:04:43 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
-#include <stdio.h>
 
 void	ft_check_factor(t_stack *a, t_stack *b, int num)
 {
@@ -33,7 +32,7 @@ void	ft_check_sort(long long *int_arr, int arr_size)
 	i = arr_size - 1;
 	while (i > 0)
 	{
-		if (int_arr[i] > int_arr[i-1]) //이부분 좀 의심이 간다. 부호?
+		if (int_arr[i] > int_arr[i-1]) //이부분 좀 의심이 간다. 부등호?
 			return ;
 		i--;
 	}
