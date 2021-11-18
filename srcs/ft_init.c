@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:57:34 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/15 16:49:52 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/18 21:45:42 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ void		ft_arr_put(char **split_arr, long long *int_arr, int *j, int arr_size) //ê
 		i = 0;
 		while (i < split_size)
 		{
-			temp = ft_atoll(split_arr[i]);
+			temp = ft_atoll(split_arr[i++]);
 			int_arr[arr_size - 1 - *j] = temp;
-			(*j)++;
+			*j += 1;
 		}
 	}
 	else
 	{
 		temp = ft_atoll(*split_arr);
 		int_arr[arr_size - 1 - *j] = temp;
-		(*j)++;
+		*j += 1;
 	}
 }
 

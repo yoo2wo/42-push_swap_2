@@ -6,12 +6,12 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:12:34 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/18 14:48:29 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/16 11:22:20 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_push_swap.h"
-#include <stdio.h>
+
 void	ra(t_stack *a, int *ra_cnt)
 {
 	int	data;

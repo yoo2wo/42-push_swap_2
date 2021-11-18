@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 15:45:36 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 15:49:15 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/18 20:48:55 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	rrb(t_stack *b)
 	data_b = last_b->data;
 	ft_pop_last(b);
 	ft_push_first(b, data_b);
-	write(1, "rra\n", 4);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack *a, t_stack *b)

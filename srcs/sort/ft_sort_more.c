@@ -6,7 +6,7 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:29:24 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/16 17:38:52 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/18 20:34:47 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_a_b(t_stack *a, t_stack *b, int cnt)
 		return ;
 	else if (cnt == 2)
 	{
-		ft_factor_two(a);//
+		ft_factor_two(a);
 		return ;
 	}
 	pb_cnt = 0;

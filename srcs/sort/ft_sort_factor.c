@@ -6,12 +6,11 @@
 /*   By: jayoo <jayoo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:00:50 by jayoo             #+#    #+#             */
-/*   Updated: 2021/11/18 15:03:28 by jayoo            ###   ########.fr       */
+/*   Updated: 2021/11/18 15:34:47 by jayoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_push_swap.h"
-#include <stdio.h>
 
 void	ft_five_end(t_stack *a, t_stack *b, int pb_cnt, int max)
 {
@@ -52,6 +51,8 @@ void	ft_factor_three(t_stack *head)
 		rra(head);
 	if (top->data == max && top->next->data == min)
 		ra(head, &i);
+	// if (top->next->data == max && top->next->next->data == min)
+	// 	rra(head);
 }
 
 void	ft_factor_five(t_stack *a, t_stack *b)
